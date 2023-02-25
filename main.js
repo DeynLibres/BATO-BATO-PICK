@@ -1,12 +1,12 @@
-let choices = ['rock', 'paper', 'scissors'];
+let choices = ['rock', 'hand', 'scissors'];
 let images = {
   rock: 'rock.png',
-  paper: 'paper.png',
+  hand: 'hand.png',
   scissors: 'scissor.png',
 };
 
 let rock = document.getElementById('rock');
-let paper = document.getElementById('paper');
+let hand = document.getElementById('hand');
 let scissors = document.getElementById('scissors');
 let playerChoice = document.getElementById('playerChoice');
 let computerChoice = document.getElementById('computerChoice');
@@ -23,8 +23,8 @@ rock.addEventListener('click', function() {
   play('rock');
 });
 
-paper.addEventListener('click', function() {
-  play('paper');
+hand.addEventListener('click', function() {
+  play('hand');
 });
 
 scissors.addEventListener('click', function() {
@@ -43,8 +43,8 @@ function play(pChoice) {
 
   } else if (
     (pChoice == 'rock' && cChoice == 'scissors') ||
-    (pChoice == 'paper' && cChoice == 'rock') ||
-    (pChoice == 'scissors' && cChoice == 'paper')
+    (pChoice == 'hand' && cChoice == 'rock') ||
+    (pChoice == 'scissors' && cChoice == 'hand')
   ) {
     outcome = 'Player win!';
   } else {
